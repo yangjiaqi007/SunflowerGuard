@@ -1,0 +1,23 @@
+# ============================================================
+# 太阳花守护 下载计数 Worker - Cloudflare 配置
+# ------------------------------------------------------------
+# 部署步骤：
+#   1. npm install -g wrangler  （或 npx wrangler）
+#   2. wrangler login
+#   3. wrangler kv:namespace create DOWNLOAD_COUNTS
+#      → 把返回的 id 填到下方 kv_namespaces.id
+#   4. 设置后台访问 Token（请改成你自己的强随机字符串）：
+#      wrangler secret put ADMIN_TOKEN
+#   5. wrangler deploy
+#   6. 部署后得到 https://sg-counter.<你的子域>.workers.dev
+#      把它填入网站 assets/js/download.js 的 WORKER_URL
+# ============================================================
+
+name = "sg-counter"
+main = "download-counter.js"
+compatibility_date = "2024-09-01"
+
+# KV 命名空间：用 `wrangler kv:namespace create DOWNLOAD_COUNTS` 创建后填入 id
+[[kv_namespaces]]
+binding = "DOWNLOAD_COUNTS"
+id = "在这里填入你的 KV namespace id"

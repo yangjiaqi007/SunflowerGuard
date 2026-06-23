@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>太阳花守护 · 用药提醒与挂水记录 | 数据只留在你的手机里</title>
+  <meta name="description" content="太阳花守护 —— 一款完全离线、隐私优先的用药提醒与挂水记录工具。到点必响、锁屏全屏提醒、文字输入建计划、数据纯本地不联网。支持 Android、HarmonyOS、iOS。" />
+  <meta name="keywords" content="太阳花守护,用药提醒,服药提醒,挂水记录,输液记录,离线,隐私保护,适老化,慢病管理" />
+
+  <!-- SEO / 社交分享 -->
+  <link rel="canonical" href="https://sunflower-guard.github.io/" />
+  <meta property="og:title" content="太阳花守护 · 用药提醒与挂水记录" />
+  <meta property="og:description" content="到点提醒吃药，记录每一次挂水——数据只留在你的手机里。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sunflower-guard.github.io/" />
+  <meta property="og:image" content="https://sunflower-guard.github.io/assets/img/logo.png" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="太阳花守护" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="太阳花守护 · 用药提醒与挂水记录" />
+  <meta name="twitter:description" content="到点提醒吃药，记录每一次挂水——数据只留在你的手机里。" />
+  <meta name="twitter:image" content="https://sunflower-guard.github.io/assets/img/logo.png" />
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "太阳花守护",
+    "applicationCategory": "MedicalApplication",
+    "operatingSystem": "Android 7.0+, HarmonyOS 4.0+, iOS 13.0+",
+    "description": "一款完全离线、隐私优先的用药提醒与挂水记录工具。到点必响、锁屏全屏提醒、文字输入建计划、数据纯本地不联网。",
+    "softwareVersion": "3.2.0",
+    "downloadUrl": "https://sunflower-guard.github.io/#download",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    },
+    "featureList": [
+      "用药提醒（锁屏全屏提醒）",
+      "挂水（输液）记录与拍照",
+      "历史记录查询与导出（CSV/HTML）",
+      "文字输入建计划"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Jiaqi YANG"
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ① 顶部导航 -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <img src="assets/img/logo.png" alt="太阳花守护" />
+        <span>太阳花守护</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">功能</a></li>
+        <li><a href="#highlights">特色</a></li>
+        <li><a href="#privacy">隐私</a></li>
+        <li><a href="#download">下载</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#download" class="nav-cta">立即下载</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="切换导航菜单" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </nav>
+
+  <!-- ② Hero 首屏 -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <img src="assets/img/logo.png" alt="太阳花守护" class="hero-logo" />
+      <h1><span class="sunflower">🌻</span> 太阳花守护</h1>
+      <p class="tagline">到点提醒吃药，记录每一次挂水——数据只留在你的手机里</p>
+      <p class="sub">完全离线 · 隐私优先 · 适老化大字 · 三平台同步</p>
+      <div class="dl-row" id="heroDl">
+        <a class="dl-btn" data-platform="ios" href="#" role="button">
+          <span class="dl-icon"><svg viewBox="-5 -5 25 32" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.702"/></svg></span>
+          <span>下载 iOS<small>iPhone / iPad</small></span>
+        </a>
+        <a class="dl-btn" data-platform="harmonyos" href="#" role="button">
+          <span class="dl-icon">📱</span>
+          <span>下载 鸿蒙<small>HarmonyOS 4.0+</small></span>
+        </a>
+        <a class="dl-btn" data-platform="android" href="#" role="button">
+          <span class="dl-icon">🤖</span>
+          <span>下载 Android<small>Android 7.0+</small></span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">向下滚动了解更多 ↓</div>
+  </header>
+
+  <!-- ③ 三大支柱 -->
+  <section id="pillars">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">为什么选择我们</span>
+        <h2>三重守护，让用药更安心</h2>
+        <p>专为长期服药的慢病患者、老人和家属照护者设计</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="emoji">⏰</div>
+          <h3>到点必响</h3>
+          <p>锁屏全屏提醒 + 声音 + 震动 + 横幅四重保障，开机自启、后台兜底，尽最大努力不漏掉每一次服药。</p>
+        </div>
+        <div class="pillar">
+          <div class="emoji">🔒</div>
+          <h3>100% 离线</h3>
+          <p>应用不申请联网权限，数据 100% 留在本地，无云同步、无广告、无追踪，隐私真正属于你。</p>
+        </div>
+        <div class="pillar">
+          <div class="emoji">👴</div>
+          <h3>适老化</h3>
+          <p>大字大按钮、高对比度、关闭误触滑动、危险操作长按确认，老人也能轻松上手。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 功能介绍 -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">核心功能</span>
+        <h2>一目了然的用药管理</h2>
+        <p>四大核心模块覆盖计划、提醒、记录、导出全流程</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="phone">
+            <img src="assets/img/screenshots/reminder.png" alt="用药提醒" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder" style="display:none">全屏用药提醒<br>截图待替换</div>
+            <div class="ph-badge">🔔 用药提醒</div>
+          </div>
+          <div class="ft-body">
+            <h3>用药提醒</h3>
+            <p>建立多个用药计划，每个药品支持多个时间点和各自剂量，精准到分钟。</p>
+            <ul>
+              <li>待服 / 已服 / 跳过 一目了然</li>
+              <li>到点全屏提醒，大字显示药名与用量</li>
+              <li>已服 · 跳过 · 延后 三键操作，长按防误触</li>
+              <li>支持药品图片拍照录入</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature reverse">
+          <div class="phone">
+            <img src="assets/img/screenshots/infusion.png" alt="挂水记录" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder" style="display:none">挂水拍照记录<br>截图待替换</div>
+            <div class="ph-badge">💉 挂水</div>
+          </div>
+          <div class="ft-body">
+            <h3>挂水（输液）记录</h3>
+            <p>每次挂水拍照留档，支持多张照片，可添加备注，方便复诊时给医生看。</p>
+            <ul>
+              <li>一次记录可拍多张照片</li>
+              <li>支持重新拍照、删除单张</li>
+              <li>文字备注，记录特殊情况</li>
+              <li>展示最近一个月记录</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="phone">
+            <img src="assets/img/screenshots/history.png" alt="历史记录" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder" style="display:none">历史记录导出<br>截图待替换</div>
+            <div class="ph-badge">📋 记录</div>
+          </div>
+          <div class="ft-body">
+            <h3>记录查询与导出</h3>
+            <p>按日期范围查询用药记录，支持 CSV / HTML 双格式导出，复诊就医更方便。</p>
+            <ul>
+              <li>CSV（Excel 直接打开，带 BOM）</li>
+              <li>HTML / PDF 打印友好，中文完美显示</li>
+              <li>用药记录与挂水记录均可导出</li>
+              <li>可分享给医生或家属</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="feature reverse">
+          <div class="phone">
+            <img src="assets/img/screenshots/addplan.png" alt="文字输入建计划" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="placeholder" style="display:none">文字输入建计划<br>截图待替换</div>
+            <div class="ph-badge">✨ 文字输入建计划</div>
+          </div>
+          <div class="ft-body">
+            <h3>文字输入建计划</h3>
+            <p>直接输入药品名称、服用时间和剂量，快速建立用药计划。</p>
+            <ul>
+              <li>支持为每个药品设置多个服药时间</li>
+              <li>每个时间点可独立设置剂量</li>
+              <li>支持片/粒/ml/mg/包/支等多种剂量单位</li>
+              <li>老人也能轻松建立用药计划</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ 特色亮点 -->
+  <section id="highlights">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">特色亮点</span>
+        <h2>细节之处见用心</h2>
+        <p>每一项设计，都为了让守护更可靠</p>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight">
+          <div class="hl-emoji">🔔</div>
+          <h4>锁屏全屏提醒</h4>
+          <p>手机锁屏也会亮屏弹出大字界面，显示药名、用量、时间和超时分钟，第一时间提醒你。</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-emoji">⚡</div>
+          <h4>开机自启恢复</h4>
+          <p>重启手机后自动恢复所有闹钟，后台兜底任务定期重排，应对系统省电杀后台。</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-emoji">📲</div>
+          <h4>通知栏快捷操作</h4>
+          <p>无需进入 App，在通知栏即可标记已服、跳过或延后，操作更快更省心。</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-emoji">🚫</div>
+          <h4>无广告无追踪</h4>
+          <p>不集成任何第三方统计、推送、广告，纯净体验，专注做好一件事。</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-emoji">📤</div>
+          <h4>双格式导出</h4>
+          <p>用药与挂水记录均可导出 CSV 与 HTML，复诊时给医生一份完整的服药档案。</p>
+        </div>
+        <div class="highlight">
+          <div class="hl-emoji">🔄</div>
+          <h4>三平台一致</h4>
+          <p>Android、HarmonyOS、iOS 功能与版本同步，跨平台切换体验无缝衔接。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 隐私专区 -->
+  <section id="privacy">
+    <div class="container">
+      <div class="privacy-band">
+        <div class="lock-emoji">🛡️</div>
+        <h2>隐私，是我们的底线</h2>
+        <p class="lead">太阳花守护在代码层面不申请联网权限，你的用药数据、药品照片、挂水照片，永远只保存在你的设备本地。</p>
+        <div class="privacy-points">
+          <span>🚫 不申请联网权限</span>
+          <span>📦 数据 100% 本地存储</span>
+          <span>☁️ 无云同步 / 无云备份</span>
+          <span>📊 无第三方统计 / 无追踪</span>
+          <span>📢 无广告</span>
+          <span>👤 无需注册账号</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ 下载区 -->
+  <section id="download" class="download">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">立即下载</span>
+        <h2>选择你的平台</h2>
+        <p>当前版本 v3.2.0 · 三平台同步更新</p>
+      </div>
+      <div class="download-grid">
+        <div class="download-card">
+          <div class="dc-icon" aria-hidden="true"><svg viewBox="-5 -5 25 32" width="1em" height="1em" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.702"/></svg></div>
+          <h3>iOS</h3>
+          <p class="dc-ver">版本 v3.2.0</p>
+          <ul class="dc-req">
+            <li>iPhone / iPad</li>
+            <li>iOS 13.0 及以上</li>
+          </ul>
+          <a class="btn-download" data-platform="ios" href="#" role="button">下载安装包</a>
+        </div>
+        <div class="download-card">
+          <div class="dc-icon" aria-hidden="true">📱</div>
+          <h3>HarmonyOS</h3>
+          <p class="dc-ver">版本 v3.2.0</p>
+          <ul class="dc-req">
+            <li>手机 / 平板 / 2in1</li>
+            <li>HarmonyOS 4.0 及以上</li>
+          </ul>
+          <a class="btn-download" data-platform="harmonyos" href="#" role="button">下载安装包</a>
+        </div>
+        <div class="download-card">
+          <div class="dc-icon" aria-hidden="true">🤖</div>
+          <h3>Android</h3>
+          <p class="dc-ver">版本 v3.2.0</p>
+          <ul class="dc-req">
+            <li>手机 / 平板</li>
+            <li>Android 7.0（API 24）及以上</li>
+          </ul>
+          <a class="btn-download" data-platform="android" href="#" role="button">下载安装包</a>
+        </div>
+      </div>
+      <div class="disclaimer-strip">
+        <strong>⚠️ 重要提示：</strong>本应用仅为用药提醒辅助工具，不构成任何医疗建议，用药请以医生处方为准。
+        详见 <a href="disclaimer.html">免责声明</a> 与 <a href="privacy/">隐私政策</a>。
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧ FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">常见问题</span>
+        <h2>你可能想知道的</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1" type="button">为什么没有收到用药提醒？<span class="arrow" aria-hidden="true">+</span></button>
+          <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+            <p>安卓各厂商 ROM 后台管理差异较大，请依次检查：</p>
+            <p>1. 在「设置」Tab 确认通知权限已开启；<br>
+               2. 系统设置 → 应用 → 太阳花守护 → 通知，确保「允许通知」开启；<br>
+               3. 系统设置 → 应用 → 太阳花守护 → 电池，选择「不限制」；<br>
+               4. 确认「闹钟 / 定时器」权限已开启；<br>
+               5. 国产手机请在「自启动管理」中开启自启动，并在最近任务里锁定应用，防止被一键清理。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2" type="button">数据会丢失吗？安全吗？<span class="arrow" aria-hidden="true">+</span></button>
+          <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+            <p>所有数据通过系统原生的本地数据库（SQLite）保存在你的设备上，数据安全性高、不会上传任何服务器。</p>
+            <p>但请注意：卸载应用会同时删除所有数据，更换手机或重装后数据不可恢复。建议定期通过「导出」功能备份用药记录。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3" type="button">如何修改用药提醒的铃声？<span class="arrow" aria-hidden="true">+</span></button>
+          <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+            <p>进入「设置」Tab，点击「🔔 提醒铃声」，在弹出的选择界面中点击任意铃声试听，选择后点击「确定」即可。</p>
+            <p>选择的铃声仅对太阳花守护的用药提醒生效，不会影响系统其他通知。如需恢复默认，选择「默认通知铃声」即可。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4" type="button">升级系统或更换手机后数据还在吗？<span class="arrow" aria-hidden="true">+</span></button>
+          <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+            <p>更换手机或卸载重装后数据不可恢复。建议在更换前先通过「导出」功能备份用药记录，再在新设备上重新添加用药计划。</p>
+            <p>由于应用完全离线、不上云，因此无法提供云端跨设备同步——这是我们为保护隐私所做的取舍。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5" type="button">导出的 CSV 文件在哪里？<span class="arrow" aria-hidden="true">+</span></button>
+          <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+            <p>导出的 CSV 文件保存在手机的「下载（Download）」目录下，可通过文件管理器查找，或通过微信、邮件等方式分享给他人。</p>
+            <p>CSV 采用 UTF-8 + BOM 编码，Excel 可直接打开中文不乱码。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6" type="button">应用真的完全不需要联网吗？<span class="arrow" aria-hidden="true">+</span></button>
+          <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
+            <p>是的。太阳花守护在代码层面不申请任何联网权限，所有功能（提醒、记录、导出、自然语言解析）均在本地完成。</p>
+            <p>应用首次启动会弹出隐私协议，你可以在「设置 → 隐私说明」随时查看完整隐私政策。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ 页脚 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="f-brand">
+          <img src="assets/img/logo.png" alt="太阳花守护" />
+          <span>🌻 太阳花守护</span>
+        </div>
+        <p class="f-desc">到点提醒吃药，记录每一次挂水。完全离线，隐私至上。让用药提醒像阳光一样温暖可靠。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h5>产品</h5>
+          <ul>
+            <li><a href="#features">核心功能</a></li>
+            <li><a href="#highlights">特色亮点</a></li>
+            <li><a href="#download">下载</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>法律</h5>
+          <ul>
+            <li><a href="privacy/">隐私政策</a></li>
+            <li><a href="disclaimer.html">免责声明</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024-2026 Jiaqi YANG · 太阳花守护 v3.2.0 · 用药提醒与挂水记录
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/download.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
