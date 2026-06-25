@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 · 太阳花守护</title>
+  <meta name="description" content="太阳花守护隐私政策 —— 应用不申请联网权限，所有数据 100% 本地存储，无云同步、无广告、无追踪。" />
+
+  <!-- SEO / 社交分享 -->
+  <link rel="canonical" href="https://sunflower-guard.github.io/privacy/" />
+  <meta property="og:title" content="隐私政策 · 太阳花守护" />
+  <meta property="og:description" content="应用不申请联网权限，所有数据 100% 本地存储，无云同步、无广告、无追踪。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sunflower-guard.github.io/privacy/" />
+  <meta property="og:image" content="https://sunflower-guard.github.io/assets/img/logo.png" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="太阳花守护" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="隐私政策 · 太阳花守护" />
+  <meta name="twitter:description" content="应用不申请联网权限，所有数据 100% 本地存储。" />
+  <meta name="twitter:image" content="https://sunflower-guard.github.io/assets/img/logo.png" />
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/doc.css" />
+</head>
+<body>
+
+  <nav class="nav doc-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="brand">
+        <img src="../assets/img/logo.png" alt="太阳花守护" />
+        <span>太阳花守护</span>
+      </a>
+      <a href="../index.html" style="color: var(--brand-primary-dark); font-weight: 600;">← 返回首页</a>
+    </div>
+  </nav>
+
+  <main class="doc">
+    <div class="doc-header">
+      <div class="doc-emoji">🛡️</div>
+      <h1>隐私政策</h1>
+      <div class="meta">
+        最后更新：2026 年 6 月
+        <span class="ver-badge">适用于 v3.2.0</span>
+      </div>
+    </div>
+
+    <div class="doc-body">
+
+      <div class="callout green">
+        <strong>一句话承诺：</strong>太阳花守护在代码层面<strong>不申请任何联网权限</strong>，你的用药数据、药品照片、挂水照片，永远只保存在你的设备本地。
+      </div>
+
+      <div class="toc">
+        <h4>目录</h4>
+        <ol>
+          <li><a href="#s1">我们收集什么信息</a></li>
+          <li><a href="#s2">信息如何存储</a></li>
+          <li><a href="#s3">信息如何使用</a></li>
+          <li><a href="#s4">权限使用说明</a></li>
+          <li><a href="#s5">第三方服务</a></li>
+          <li><a href="#s6">儿童隐私</a></li>
+          <li><a href="#s7">数据删除</a></li>
+          <li><a href="#s8">政策更新</a></li>
+          <li><a href="#s9">联系我们</a></li>
+        </ol>
+      </div>
+
+      <h2 id="s1">一、我们收集什么信息</h2>
+      <p><strong>简短回答：我们不收集你的任何个人信息。</strong></p>
+      <p>太阳花守护是一款完全离线的应用。你在应用中创建的所有内容——包括药品名称、用药时间、剂量、药品照片、挂水（输液）照片、用药记录、备注等——都<strong>仅保存在你的设备本地</strong>，不会以任何方式发送到我们的服务器或任何第三方服务器。</p>
+      <p>由于应用不申请联网权限，从技术上无法将你的数据外传。</p>
+
+      <h2 id="s2">二、信息如何存储</h2>
+      <ul>
+        <li><strong>本地数据库：</strong>所有数据通过系统原生的本地数据库（Android 使用 Room/SQLite，HarmonyOS 使用关系型数据库 RDB）保存在应用私有存储区。</li>
+        <li><strong>图片文件：</strong>药品图片与挂水照片保存在应用私有目录，其他应用默认无法访问。</li>
+        <li><strong>不上云：</strong>我们不提供、也不使用任何云端同步或云端备份服务。</li>
+        <li><strong>无账号体系：</strong>应用无需注册、无需登录，不存在与你的身份关联的账户信息。</li>
+      </ul>
+
+      <h2 id="s3">三、信息如何使用</h2>
+      <p>你在应用中录入的数据，仅用于在本地实现以下功能：</p>
+      <ul>
+        <li>按时发出用药提醒通知；</li>
+        <li>在首页与历史记录页展示你的用药计划与服药状态；</li>
+        <li>展示挂水记录及照片；</li>
+        <li>按你的操作导出 CSV / HTML 文件（导出文件也保存在你的设备，由你自行管理）。</li>
+      </ul>
+
+      <h2 id="s4">四、权限使用说明</h2>
+      <p>应用申请的权限均<strong>仅用于实现功能本身</strong>，不用于收集或上传任何数据：</p>
+      <table>
+        <tr><th>权限</th><th>用途</th><th>是否上传</th></tr>
+        <tr><td>提醒 / 通知</td><td>到点弹出用药提醒</td><td>否</td></tr>
+        <tr><td>震动</td><td>提醒时震动反馈</td><td>否</td></tr>
+        <tr><td>闹钟 / 精确闹钟</td><td>定时触发用药提醒</td><td>否</td></tr>
+        <tr><td>相机</td><td>拍摄药品包装与挂水照片（仅在你主动操作时）</td><td>否</td></tr>
+        <tr><td>相册 / 媒体</td><td>从相册选择药品图片（仅在你主动操作时）</td><td>否</td></tr>
+        <tr><td>开机启动</td><td>重启手机后自动恢复提醒闹钟</td><td>否</td></tr>
+        <tr><td>前台服务 / 后台运行</td><td>保证提醒服务持续运行不被系统杀死</td><td>否</td></tr>
+        <tr><td>忽略电池优化</td><td>防止省电策略导致提醒丢失</td><td>否</td></tr>
+      </table>
+      <div class="callout">
+        <strong>特别说明：</strong>应用<strong>不申请 INTERNET（联网）权限</strong>。这是我们对隐私的最强承诺——即便代码中存在疏漏，也无法将你的数据发送到网络。
+      </div>
+
+      <h2 id="s5">五、第三方服务</h2>
+      <p>太阳花守护<strong>不集成任何第三方统计、广告、推送、分析或追踪 SDK</strong>。应用内没有广告，也不会向你推送商业内容。自然语言识别等功能均在本地完成，不调用任何云端 AI 接口。</p>
+
+      <h2 id="s6">六、儿童隐私</h2>
+      <p>应用面向需要长期服药的用户及其家属，不针对 13 岁以下儿童进行营销。由于我们不收集任何个人信息，因此不涉及未成年人个人信息的收集与处理。</p>
+
+      <h2 id="s7">七、数据删除</h2>
+      <ul>
+        <li><strong>删除单条记录：</strong>你可以在应用内删除任意药品计划、用药记录或挂水记录，删除后立即从本地数据库移除。</li>
+        <li><strong>彻底清除所有数据：</strong>卸载应用将同时删除应用内的全部数据。</li>
+        <li><strong>导出后自行管理：</strong>你主动导出的 CSV / HTML 文件保存在设备的下载目录，由你自行管理其留存与删除。</li>
+      </ul>
+
+      <h2 id="s8">八、政策更新</h2>
+      <p>若本隐私政策有重大变更，我们会在应用更新说明中告知。继续使用应用即表示你同意最新版本的隐私政策。</p>
+
+      <h2 id="s9">九、联系我们</h2>
+      <p>如果你对本隐私政策有任何疑问，欢迎联系作者：<strong>Jiaqi YANG</strong>，邮箱：<a href="mailto:yang.jiaqi008@gmail.com">yang.jiaqi008@gmail.com</a>。</p>
+      <div class="callout green">
+        🌻 <strong>太阳花守护</strong> —— 让用药提醒像阳光一样温暖可靠。
+      </div>
+    </div>
+
+    <div class="doc-back">
+      <a href="../index.html">← 返回首页</a>
+    </div>
+  </main>
+
+</body>
+</html>
